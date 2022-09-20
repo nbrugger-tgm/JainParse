@@ -44,7 +44,7 @@ public class ManualTest {
 						   reference("Number"),
 						   reference("Singed Number"),
 						   reference("Enclosed Expression")
-				   ).setName("Non calc expression")
+				   ).named("Non calc expression")
 		   )
 		   .map(
 				   build("Expression")
@@ -57,7 +57,7 @@ public class ManualTest {
 						   .token(BRACKET_CLOSED).add()
 		   );
 		DefaultParser parser  = new DefaultParser(ref, "Expression");
-		var           result  = parser.parse("(10*10)/5+24/-12-2");
+		var           result  = parser.parse("500/5/10/2");
 		var           reduced = result.reduce("expression");
 		serveAstHtml(reduced);
 		System.out.println(reduced.format());
@@ -73,7 +73,7 @@ public class ManualTest {
 			exchange.close();
 		});
 		server.setExecutor(null);
-		server.bind(new InetSocketAddress("0.0.0.0", 80), 1);
+		server.bind(new InetSocketAddress("0.0.0.0", 4200), 1);
 		server.start();
 	}
 

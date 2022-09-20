@@ -4,4 +4,4 @@
 
 rootProject.name = 'jainparse'
 
-include "core", "generator", "grammar-parser"
+include "core", "generator", "grammar-parser", "simplescript"

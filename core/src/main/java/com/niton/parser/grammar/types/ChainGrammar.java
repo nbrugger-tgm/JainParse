@@ -70,4 +70,10 @@ public class ChainGrammar extends Grammar<ChainMatcher, SuperNode>
 		addGrammar(tokenDefiner);
 		return this;
 	}
+
+	@Override
+	public ChainGrammar then(Grammar<?, ?> tokenDefiner,String name) {
+		addGrammar(tokenDefiner,name);
+		return this;
+	}
 }

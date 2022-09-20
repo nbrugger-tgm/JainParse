@@ -162,6 +162,12 @@ public abstract class Grammar<M extends GrammarMatcher<R>, R extends AstNode> {
 		chain.addGrammar(tokenDefiner);
 		return chain;
 	}
+	public ChainGrammar then(Grammar<?, ?> tokenDefiner,String name) {
+		var chain = new ChainGrammar();
+		chain.addGrammar(this);
+		chain.addGrammar(tokenDefiner,name);
+		return chain;
+	}
 
 	public Grammar<M,R> named(String name){
 		this.name = name;
