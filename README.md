@@ -1,5 +1,11 @@
 # JainParse
 
+## Archived
+
+> This project is no longer maintained. It was mostly a experiment to begin with. While it is in a useable state the performance of generic recursive decent parsers is already bad, that ontop of java not being c doen't make this project viable (which it wasn't intended to be)
+
+## Documentation
+
 Jain parse is a lib to create your own parsers (and writers).<br>
 Its main features are
 
